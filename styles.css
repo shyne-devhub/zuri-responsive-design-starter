@@ -13,7 +13,11 @@ div.nav-bar {
     padding: 1rem 6rem;
     width: 100vw;
     background: #304353;
+    overflow: hidden;
 }
+.nav-bar #myTopnav {
+    display: none;
+  }
 
 div.logo {
     font-size: 1.5rem;
@@ -36,6 +40,7 @@ ul li a {
     text-decoration: none;
     color: #88949B;
     padding: 0.5vw;
+    
 }
 
 ul li a:hover {
@@ -43,7 +48,39 @@ ul li a:hover {
     background: #fff;
     padding: 0.5rem;
 }
-
+@media screen and (max-width:768px){
+    div.nav-bar{
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        width: 100vw;
+        
+    }
+    div.logo{
+        font-size: 1.3rem;
+    }
+    .icon{
+        position: absolute;
+        cursor: pointer;
+        right: 10%;
+        top: 7%;
+        transform: translate(-10%, -80%);
+        color: #f0f0f0;
+        z-index: 2;
+    }
+    ul.nav-links{
+        flex-direction: column;
+        position: fixed;
+        display: none;
+    }
+    ul li{
+        margin: 0 ;
+        font-size: 1rem;
+    }
+    ul li a{
+        display: block;
+    }
+}
 div.hero-section {
     background: #304353;
     padding: 10rem;
@@ -85,6 +122,19 @@ div.hero-content-btn a {
     padding: 10px 30px;
     border-radius: 3px;
     letter-spacing: 2px;
+}
+@media screen and (max-width) {
+    div.hero-section{
+        padding: 5rem 2rem;
+    }
+    div.hero-content-heading h3{
+        text-align: center;
+        font-size: 1.6rem;
+        text-transform: none;
+    }
+    div.hero-content-heading p{
+        font-size: 0.6rem;
+    }  
 }
 
 div.hero-background {
@@ -128,6 +178,27 @@ div.hero-background-pos {
     height: 140px;
     border-radius: 50%;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
+}
+@media screen and (max-width:768px){
+    div.hero-background{
+        padding: 3rem;
+    }
+    div.background{
+        padding: 10px 30px;
+        width: 300px;
+        height: 250px;
+    }
+    div.background h4{
+        padding: 1rem;
+        font-size: 1rem;
+    } 
+    div.background p{
+        padding-left: 1rem;
+        font-size: 0.8rem;
+    }
+    div.hero-background-pos{
+        display: none;
+    }
 }
 
 div.snapshot-team {
@@ -207,6 +278,34 @@ div.box1 h5 {
     color: #E44C65;
     font-size: 1rem;
 }
+@media  screen and (max-width:768px) {
+    div.snapshot-team{
+        padding: 2rem;
+        background: #f0f0f0;
+        text-align: center;
+    }
+    div.snapshot-team h2{
+        font-size: 1.2rem;
+    }
+    div.snapshot-team p{
+        font-size: 0.8rem;
+    }
+    div.snapshot-box{
+        padding: 2rem 0rem;
+    }div.snapshot-box-content{
+        display: flex;
+        flex-direction: column;
+    }
+    div.box1{
+        width: 300px;
+        height: 230px;
+    }
+    div.box3{
+        width: 300px;
+        height: 230px;
+    }
+    
+}
 
 div.gallery-section {
     background: #fff;
@@ -245,6 +344,22 @@ div.img {
 div.img img {
     width: 250px;
     height: 180px;
+}
+@media screen and (max-width:768px){
+    div.gallery-section{
+        padding: 2rem;
+    }
+    div.img img{
+        width: 300px;
+        height: 180px;
+    }
+    div.gallery-content h4{
+        font-size: 1.2rem;
+    }
+    div.gallery-content p{
+        font-size: 0.8rem;
+    }
+    
 }
 
 div.footer {
